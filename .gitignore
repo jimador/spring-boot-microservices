@@ -128,4 +128,6 @@ Desktop.ini
 # Maven Wrapper
 ######################
 .mvn
+mvnw
+mvnw.*
 !.mvn/wrapper/maven-wrapper.jar
