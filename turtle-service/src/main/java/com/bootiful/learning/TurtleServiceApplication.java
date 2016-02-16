@@ -15,10 +15,11 @@ public class TurtleServiceApplication {
 	@Bean
 	CommandLineRunner runner(TurtleRepository repository){
 		return args -> Arrays.asList(
-                new Turtle("Jim", "Snapper", 40),
-                new Turtle("Bob", "Terrapin", 30),
-                new Turtle("Raph", "Box", 20),
-                new Turtle("Donnie", "Slider", 10)
+                new Turtle("Jim", "Snapping Turtle", 40),
+                new Turtle("Bob", "Terrapin Turtle", 30),
+                new Turtle("Raph", "Box Turtle", 20),
+                new Turtle("Donnie", "Slider Turtle", 10),
+                new Turtle("Ninja", "Alligator Snapping Turtle", 1_000_000)
         ).forEach(repository::save);
 	}
 	public static void main(String[] args) {
