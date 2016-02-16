@@ -1,6 +1,6 @@
 package com.bootiful.learning.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,5 +18,11 @@ public class Turtle {
 
     private String name;
     private String type;
-    private Integer healthPoints;
+    private Integer hp;
+
+    public Turtle(String name, String type, Integer hp) {
+        this.name = name;
+        this.type = type;
+        this.hp = hp;
+    }
 }
