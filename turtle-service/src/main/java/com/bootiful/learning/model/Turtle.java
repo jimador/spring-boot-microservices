@@ -11,17 +11,18 @@ import javax.persistence.Id;
  */
 @Entity
 @Data
+@NoArgsConstructor
 public class Turtle {
     @Id
     @GeneratedValue
     private Long id;
 
-    private String name;
+    private String turtleName;
     private String type;
     private Integer hp;
 
     public Turtle(String name, String type, Integer hp) {
-        this.name = name;
+        this.turtleName = name;
         this.type = type;
         this.hp = hp;
     }

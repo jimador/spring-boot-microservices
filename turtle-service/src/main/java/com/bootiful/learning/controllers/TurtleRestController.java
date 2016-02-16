@@ -31,7 +31,7 @@ public class TurtleRestController {
         return turtleRepository
                 .findAll()
                 .stream()
-                .map(Turtle::getName)
+                .map(Turtle::getTurtleName)
                 .collect(Collectors.toList());
     }
 
