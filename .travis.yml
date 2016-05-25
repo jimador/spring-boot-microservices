@@ -8,11 +8,10 @@ jdk:
 before_install:
   - git config user.name "$GIT_NAME"
   - git config user.email "$GIT_EMAIL"
-install:
-- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-- mvn install
+- "travis_wait mvn install"
 env:
   global:
   - GIT_NAME="James Dunnam"
   - GIT_EMAIL=jamesd1184@gmail.com
+  - MAVEN_OPTS="-Xms2048m -Xmx=2048m"
